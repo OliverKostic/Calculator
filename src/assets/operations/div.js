@@ -1,7 +1,6 @@
-
-operations.push({
-    name: 'Divide',
-    fun:  (result, value) => {
-      return result / value;
-    }
-});
+export const div = {
+  name: 'Divide',
+  fun: (result, value) => {
+    return result / value;
+  }
+};

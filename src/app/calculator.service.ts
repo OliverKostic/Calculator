@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import {operations} from './config.js';
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +9,11 @@ export class CalculatorService {
 
   public actionList = [];
   public result = 0;
-  public operationList = window['oplst'];
+  public operationList = [];
   public clearFields = new Subject<any>();
 
   constructor() {
+    this.operationList = operations;
   }
 
   calculate () {

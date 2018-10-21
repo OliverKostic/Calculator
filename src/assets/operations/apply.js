@@ -1,4 +1,5 @@
+export const apply = {
+  name: 'Apply'
+};
 
-operations.push({
-    name: 'Apply'
-});
+
