@@ -2,9 +2,8 @@ import {async, ComponentFixture, inject, TestBed} from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
 import { InputsComponent } from './inputs.component';
-import {CalculatorService} from '../calculator.service';
 
-describe('InputsComponent', () => {
+fdescribe('InputsComponent', () => {
   let component: InputsComponent;
   let fixture: ComponentFixture<InputsComponent>;
 
@@ -25,4 +24,9 @@ describe('InputsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have operators', async(() => {
+    fixture = TestBed.createComponent(InputsComponent);
+    expect(fixture.componentInstance.operationList.length).toBeGreaterThan(0);
+  }));
 });
